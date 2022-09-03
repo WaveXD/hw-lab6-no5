@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <script>
+        function addSong() {
+            var a = document.getElementById("nameTextInput");
+            var b = document.getElementById("homeTextInput");
+            var c = document.getElementById("telTextInput");
+            var table = document.getElementById("A")
+            var tr = document.createElement("tr")
+            var td1 = document.createElement("td")
+            td1.innerHTML = a.value;
+            tr.appendChild(td1)
+            var td2 = document.createElement("td")
+            td2.innerHTML = b.value;
+            tr.appendChild(td2)
+            var td3 = document.createElement("td")
+            td3.innerHTML = c.value;
+            tr.appendChild(td3)
+            table.appendChild(tr)
+        }
+    </script>
+    <style>
+        table,
+        td {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        ชื่อลูกค้า : <input type="text" id="nameTextInput"><br>
+        ที่อยู่ : <input type="text" id="homeTextInput"><br>
+        เบอร์โทรศัพท์ : <input type="number" id="telTextInput"><br>
+        <input type="button" id="addButton" value="เพิ่ม" onclick="addSong()">
+    </form>
+    <table id="A">
+        <tr>
+            <td>ชื่อลูกค้า</td>
+            <td>ที่อยู่</td>
+            <td>โทรศัพท์</td>
+        </tr>
+
+    </table>
+</body>
